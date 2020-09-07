@@ -15,12 +15,12 @@ export default class DataEntryScreen extends Component {
     }
 
     _handlePress() {
-        dataArray = {
-            name: this.state.userName, country: this.state.country,
+        this.state.dataArray = {
+            userName: this.state.userName, country: this.state.country,
             favorite: this.state.favorite, phoneNumber: this.state.phoneNumber
         };
         //navigating to detail screen along with dataArray value. 
-        this.props.navigation.navigate('Detail Screen', dataArray)
+        this.props.navigation.navigate('Detail Screen', this.state.dataArray)
 
     }
 
@@ -53,14 +53,6 @@ export default class DataEntryScreen extends Component {
                     title="Submit"
                     onPress={() => {
                         this._handlePress()
-                    }
-                    }
-                />
-
-                <Button
-                    title="Go to Detail Screen"
-                    onPress={() => {
-                        this.props.navigation.navigate('Detail Screen', { userName: this.state.userName })
                     }
                     }
                 />

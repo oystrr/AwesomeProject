@@ -8,33 +8,34 @@ export default class DetailScreen extends Component {
         super(props);
         this.state = {
             receivedData: [],
-            index: 0
+            index: 1
         }
     }
 
-    _onPressOut() {
-        let temp = this.index++
-        this.state.receivedData.push(temp)
-        this.setState({
-            receivedData: this.state.receivedData
-        })
-    }
-
+    // _onPressOut = () => {
+    //     let temp = this.index++
+    //     this.state.receivedData.push(temp)
+    //     this.setState({
+    //         receivedData: this.state.receivedData
+    //     })
+    // }
+    
     render() {
         //receiving the data 
         let receivedData = this.props.route.params;
+        //this._onPressOut();
 
         //dynamically adding a new row to the DataTable
-        let Arr = this.state.receivedData.map((a, i) => {
-            return (
-                <DataTable.Row key={i} style={{ height: 40, borderBottomWidth: 2, borderBottomColor: '#ededed' }}>
-                    <DataTable.Cell>{receivedData.name}</DataTable.Cell>
-                    <DataTable.Cell>{receivedData.country}</DataTable.Cell>
-                    <DataTable.Cell>{receivedData.favorite}</DataTable.Cell>
-                    <DataTable.Cell numeric>{receivedData.phoneNumber}</DataTable.Cell>
-                </DataTable.Row>
-            )
-        })
+        // let Arr = this.state.receivedData.map((a, i) => {
+        //     return (
+        //         <DataTable.Row key={i} style={{ height: 40, borderBottomWidth: 2, borderBottomColor: '#ededed' }}>
+        //             <DataTable.Cell>{receivedData.name}</DataTable.Cell>
+        //             <DataTable.Cell>{receivedData.country}</DataTable.Cell>
+        //             <DataTable.Cell>{receivedData.favorite}</DataTable.Cell>
+        //             <DataTable.Cell numeric>{receivedData.phoneNumber}</DataTable.Cell>
+        //         </DataTable.Row>
+        //     )
+        // })
 
         return (
             <>
@@ -54,11 +55,11 @@ export default class DetailScreen extends Component {
                             <DataTable.Cell numeric>0123456789</DataTable.Cell>
                         </DataTable.Row>
 
-                        {Arr}
+                        {/* {Arr} */}
 
                         {/*statically updating the value of received user input data*/}
                         <DataTable.Row>
-                            <DataTable.Cell>{receivedData.name}</DataTable.Cell>
+                            <DataTable.Cell>{receivedData.userName}</DataTable.Cell>
                             <DataTable.Cell>{receivedData.country}</DataTable.Cell>
                             <DataTable.Cell>{receivedData.favorite}</DataTable.Cell>
                             <DataTable.Cell numeric>{receivedData.phoneNumber}</DataTable.Cell>

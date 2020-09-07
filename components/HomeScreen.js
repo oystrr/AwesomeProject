@@ -20,12 +20,6 @@ const HomeScreen = ({ navigation }) => {
         }
       />
 
-      <Button
-        title="Dummy Screen"
-        onPress={() =>
-          navigation.navigate('Dummy Screen', { name: 'Dummy Screen' })
-        }
-      />
     </>
   );
 };

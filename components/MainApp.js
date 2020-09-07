@@ -12,7 +12,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import DataEntryScreen from './DataEntryScreen';
 import DetailScreen from './DetailScreen';
 import HomeScreen from './HomeScreen';
-import Dummy from './Dummy';
 
 const Stack = createStackNavigator();
 
@@ -28,7 +27,6 @@ const MainApp = () => {
         />
         <Stack.Screen name="DataEntryScreen" component={DataEntryScreen} />
         <Stack.Screen name="Detail Screen" component={DetailScreen} />
-        <Stack.Screen name="Dummy Screen" component={Dummy} />
       </Stack.Navigator>
     </NavigationContainer>
   );
