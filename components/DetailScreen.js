@@ -4,7 +4,6 @@ import { DataTable } from 'react-native-paper';
 
 export default class DetailScreen extends Component {
 
-    //just checking with commit
     constructor(props) {
         super(props);
         this.state = {
