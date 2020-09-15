@@ -1,5 +1,4 @@
-# AwesomeProject
-
+# BasicCrudApp
 Basic CRUD app on react-native that takes in some user data and shows it in a data table. 
 Uses React-Navigation and react-native-paper library for datatable
 
