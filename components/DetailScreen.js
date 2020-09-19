@@ -26,7 +26,7 @@ export default DetailScreen = (props) => {
 
                 {/*statically updating the value of received user input data*/}
                 <DataTable.Row>
-                    <DataTable.Cell>{receivedData.userName}</DataTable.Cell>
+                    <DataTable.Cell>{receivedData[3]}</DataTable.Cell>
                     <DataTable.Cell>{receivedData.country}</DataTable.Cell>
                     <DataTable.Cell>{receivedData.favorite}</DataTable.Cell>
                     <DataTable.Cell numeric>{receivedData.phoneNumber}</DataTable.Cell>

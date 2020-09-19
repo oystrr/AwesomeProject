@@ -14,14 +14,22 @@ export default class DataEntryScreen extends Component {
         }
     }
 
-    _handlePress() {
+    // _handlePress() {
+    //     this.state.dataArray = {
+    //         userName: this.state.userName, country: this.state.country,
+    //         favorite: this.state.favorite, phoneNumber: this.state.phoneNumber
+    //     };
+    //     //navigating to detail screen along with dataArray value. 
+    //     this.props.navigation.navigate('Detail Screen', this.state.dataArray)
+
+    // }
+    _handlePress = () => {
         this.state.dataArray = {
             userName: this.state.userName, country: this.state.country,
             favorite: this.state.favorite, phoneNumber: this.state.phoneNumber
         };
         //navigating to detail screen along with dataArray value. 
         this.props.navigation.navigate('Detail Screen', this.state.dataArray)
-
     }
 
     render() {
