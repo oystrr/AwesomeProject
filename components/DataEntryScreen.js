@@ -14,15 +14,6 @@ export default class DataEntryScreen extends Component {
         }
     }
 
-    // _handlePress() {
-    //     this.state.dataArray = {
-    //         userName: this.state.userName, country: this.state.country,
-    //         favorite: this.state.favorite, phoneNumber: this.state.phoneNumber
-    //     };
-    //     //navigating to detail screen along with dataArray value. 
-    //     this.props.navigation.navigate('Detail Screen', this.state.dataArray)
-
-    // }
     _handlePress = () => {
         this.state.dataArray = {
             userName: this.state.userName, country: this.state.country,
@@ -71,10 +62,13 @@ export default class DataEntryScreen extends Component {
 
 const styles = StyleSheet.create({
     input: {
-        height: 40,
-        backgroundColor: 'rgba(255,255,255,0.2)',
-        marginBottom: 10,
-        color: '#000',
-        paddingHorizontal: 10
+        padding: 16,
+        marginTop: 16,
+        marginStart: 10,
+        marginEnd: 10,
+        borderColor: '#bbb',
+        borderWidth: 1,
+        borderStyle: 'dashed',
+        borderRadius: 10
     }
 });

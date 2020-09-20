@@ -6,7 +6,7 @@ const DummyDataEntry = (props) => {
     const [country, setCountry] = useState('');
     const [favorite, setFavorite] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [dataObject, setDataObject] = useState({userName:'', country:'', favorite:'', phoneNumber:''});
+    const [dataObject, setDataObject] = useState({userName:'swarup', country:'nepal', favorite:'ncell', phoneNumber:'0123'});
 
     const pressHandler = () =>{
         props.navigation.navigate('Detail Screen', dataObject)
@@ -47,10 +47,13 @@ export default DummyDataEntry;
 
 const styles = StyleSheet.create({
     inputDummy: {
-        height: 40,
-        backgroundColor: 'rgba(255,255,255,0.2)',
-        marginBottom: 10,
-        color: '#000',
-        paddingHorizontal: 10
+        padding: 16,
+        marginTop: 16,
+        marginStart: 10,
+        marginEnd: 10,
+        borderColor: '#bbb',
+        borderWidth: 1,
+        borderStyle: 'dashed',
+        borderRadius: 10
     }
 });

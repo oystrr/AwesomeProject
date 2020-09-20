@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { DataTable } from 'react-native-paper';
+import DataItem from './dataItem';
 
 export default DetailScreen = (props) => {
     let receivedData = props.route.params;
-    console.log(receivedData);
+
     return (
         <PaperProvider>
             <DataTable>
@@ -22,24 +23,15 @@ export default DetailScreen = (props) => {
                     <DataTable.Cell numeric>0123456789</DataTable.Cell>
                 </DataTable.Row>
 
-                {/* {Arr} */}
-
-                {/*statically updating the value of received user input data*/}
                 <DataTable.Row>
-                    <DataTable.Cell>{receivedData[3]}</DataTable.Cell>
-                    <DataTable.Cell>{receivedData.country}</DataTable.Cell>
-                    <DataTable.Cell>{receivedData.favorite}</DataTable.Cell>
-                    <DataTable.Cell numeric>{receivedData.phoneNumber}</DataTable.Cell>
+                    <DataTable.Cell>Scott</DataTable.Cell>
+                    <DataTable.Cell>Australia</DataTable.Cell>
+                    <DataTable.Cell>Telstra</DataTable.Cell>
+                    <DataTable.Cell numeric>0123456789</DataTable.Cell>
                 </DataTable.Row>
 
-                {/* <DataTable.Pagination
-                            page={1}
-                            numberOfPages={3}
-                            onPageChange={page => {
-                                console.log(page);
-                            }}
-                            label="1-2 of 6"
-                        /> */}
+                <DataItem data={receivedData}/>
+
             </DataTable>
         </PaperProvider>
     );
