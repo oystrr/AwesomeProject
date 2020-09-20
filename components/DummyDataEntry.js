@@ -6,39 +6,38 @@ const DummyDataEntry = (props) => {
     const [country, setCountry] = useState('');
     const [favorite, setFavorite] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [dataArray, setDataArray] = useState([]);
+    const [dataObject, setDataObject] = useState({userName:'', country:'', favorite:'', phoneNumber:''});
+
+    const pressHandler = () =>{
+        props.navigation.navigate('Detail Screen', dataObject)
+    }
 
     return (
         <>
             <TextInput
                     style={styles.inputDummy}
                     placeholder='name'
-                    onChangeText={(text) => setUserName(text)}
+                    onChangeText={(text) => setDataObject({userName: text})}
                 />
                 <TextInput
                     style={styles.inputDummy}
                     placeholder='country'
-                    onChangeText={(text) => setCountry(text)}
+                    onChangeText={(text) => setDataObject({country: text})}
                 />
                 <TextInput
                     style={styles.inputDummy}
                     placeholder='favorite phone brand'
-                    onChangeText={(text) => setFavorite(text)}
+                    onChangeText={(text) => setDataObject({favorite: text})}
                 />
                 <TextInput
                     style={styles.inputDummy}
                     placeholder='phone number'
-                    onChangeText={(text) => setPhoneNumber(text)}
+                    onChangeText={(text) => setDataObject({phoneNumber: text})}
                     keyboardType='number-pad'
                 />
                 <Button
                     title="Submit"
-                    onPress={() => {
-                        setDataArray(userName, country, favorite, phoneNumber)
-                        //console.log("name is " + userName )
-                        props.navigation.navigate('Detail Screen', dataArray)
-                    }
-                    }
+                    onPress={() => pressHandler()}
                 />
         </>
     );
