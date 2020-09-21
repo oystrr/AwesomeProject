@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import { TextInput, Button, StyleSheet, Alert } from 'react-native';
 
 const DummyDataEntry = (props) => {
@@ -6,12 +6,25 @@ const DummyDataEntry = (props) => {
     const [country, setCountry] = useState('');
     const [favorite, setFavorite] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [dataObject, setDataObject] = useState({userName:'', country:'', favorite:'', phoneNumber:''});
+    const [dataObject, setDataObject] = useState({});
 
-    const pressHandler = () =>{
-        setDataObject( {userName: userName, country:country, favorite: favorite, phoneNumber: phoneNumber});
-        props.navigation.navigate('Detail Screen', dataObject)
+    const pressHandler = (dataObject) =>{
+         setDataObject( {userName: userName, country:country, favorite: favorite, phoneNumber: phoneNumber});
+        props.navigation.navigate('Detail Screen', dataObject);   
+            
     }
+
+    //const [counter, updateCounter] = React.useState(0);
+   
+    // useEffect( pressHandler() ={
+    //     if (dataObject) {
+    //         props.navigation.navigate('Detail Screen', dataObject);
+    //     }
+    // }, []);
+   
+//    const incrementCounter = () => {
+//        updateCounter(counter + 1);
+//    }
 
     return (
         <>
@@ -38,7 +51,10 @@ const DummyDataEntry = (props) => {
                 />
                 <Button
                     title="Submit"
-                    onPress={() => pressHandler()}
+                    onPress={() => {
+                        pressHandler(dataObject)
+                        //setDataObject( {userName: userName, country:country, favorite: favorite, phoneNumber: phoneNumber});
+                    }}
                 />
         </>
     );
