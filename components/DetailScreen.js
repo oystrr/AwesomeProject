@@ -6,26 +6,17 @@ import DataItem from './dataItem';
 export default DetailScreen = (props) => {
     let receivedData = props.route.params;
 
-    const [userDataDemo, setUserDataDemo] = useState({userName:'swarup', country:'nepal', favorite:'ncell', phoneNumber:'0123'});
-    const [userDataDemoSecond, setUserDataDemoSecond] = useState({userName:'second', country:'mexico', favorite:'ncell', phoneNumber:'0123'});
-    const [userDataGroup, setUserDataGroup] = useState ([
-        {userData: userDataDemo, key: '1'},
-        {userData: userDataDemoSecond, key: '2'}
+    const [userDataDemo, setUserDataDemo] = useState({ userName: 'swarup', country: 'nepal', favorite: 'ncell', phoneNumber: '0123' });
+    const [userDataDemoSecond, setUserDataDemoSecond] = useState({ userName: 'second', country: 'mexico', favorite: 'ncell', phoneNumber: '0123' });
+    const [userDataGroup, setUserDataGroup] = useState([
+        { userData: userDataDemo, key: '1' },
+        { userData: userDataDemoSecond, key: '2' }
     ]);
 
     // const submitHandler = (userData) => {
     //     setUserDataGroup((prevUserDataGroup)=>{
     //         return[
     //             {userData: userData, key: Math.random().toString()},
-    //             ...prevUserDataGroup
-    //         ];
-    //     })
-    // }
-
-    // if (receivedData != null){
-    //     setUserDataGroup((prevUserDataGroup)=>{
-    //         return[
-    //             {userData: receivedData, key: Math.random().toString()},
     //             ...prevUserDataGroup
     //         ];
     //     })
@@ -48,7 +39,7 @@ export default DetailScreen = (props) => {
                     <DataTable.Cell numeric>0123456789</DataTable.Cell>
                 </DataTable.Row>
 
-                
+
 
                 {/* {userDataGroup.map((item)=>{
                     return(

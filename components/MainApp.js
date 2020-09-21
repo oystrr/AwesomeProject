@@ -28,7 +28,7 @@ const MainApp = () => {
         />
         <Stack.Screen name="DataEntryScreen" component={DataEntryScreen} />
         <Stack.Screen name="Detail Screen" component={DetailScreen} />
-        <Stack.Screen name="DummyDataEntry" component={DummyDataEntry}/>
+        <Stack.Screen name="DummyDataEntry" component={DummyDataEntry} />
       </Stack.Navigator>
     </NavigationContainer>
   );
