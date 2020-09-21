@@ -21,6 +21,7 @@ export default class DataEntryScreen extends Component {
         };
         //navigating to detail screen along with dataArray value. 
         this.props.navigation.navigate('Detail Screen', this.state.dataArray)
+        
     }
 
     render() {

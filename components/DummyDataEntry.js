@@ -6,9 +6,10 @@ const DummyDataEntry = (props) => {
     const [country, setCountry] = useState('');
     const [favorite, setFavorite] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [dataObject, setDataObject] = useState({userName:'swarup', country:'nepal', favorite:'ncell', phoneNumber:'0123'});
+    const [dataObject, setDataObject] = useState({userName:'', country:'', favorite:'', phoneNumber:''});
 
     const pressHandler = () =>{
+        setDataObject( {userName: userName, country:country, favorite: favorite, phoneNumber: phoneNumber});
         props.navigation.navigate('Detail Screen', dataObject)
     }
 
@@ -17,22 +18,22 @@ const DummyDataEntry = (props) => {
             <TextInput
                     style={styles.inputDummy}
                     placeholder='name'
-                    onChangeText={(text) => setDataObject({userName: text})}
+                    onChangeText={(text) => setUserName(text)}
                 />
                 <TextInput
                     style={styles.inputDummy}
                     placeholder='country'
-                    onChangeText={(text) => setDataObject({country: text})}
+                    onChangeText={(text) => setCountry(text)}
                 />
                 <TextInput
                     style={styles.inputDummy}
                     placeholder='favorite phone brand'
-                    onChangeText={(text) => setDataObject({favorite: text})}
+                    onChangeText={(text) => setFavorite(text)}
                 />
                 <TextInput
                     style={styles.inputDummy}
                     placeholder='phone number'
-                    onChangeText={(text) => setDataObject({phoneNumber: text})}
+                    onChangeText={(text) => setPhoneNumber(text)}
                     keyboardType='number-pad'
                 />
                 <Button
